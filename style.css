@@ -294,6 +294,15 @@ nav {
     padding-bottom: 5px;
 }
 
+.coming-soon {
+    opacity: 0.65;
+}
+
+.coming-soon:hover {
+    transform: none;
+    border-color: #29292f;
+}
+
 
 /* =========================
    FOOTER
