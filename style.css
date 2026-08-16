@@ -227,6 +227,97 @@ nav {
 
 
 /* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.certification-card {
+    min-height: 220px;
+    padding: 30px;
+    border: 1px solid #29292f;
+    background: #111116;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    transition: 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-8px);
+    border-color: #b7ff5a;
+}
+
+.certification-card span {
+    color: #b7ff5a;
+    margin-bottom: auto;
+}
+
+.certification-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.certification-card p {
+    color: #888;
+}
+
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.achievement-card {
+    padding: 35px;
+    border: 1px solid #29292f;
+    background: #111116;
+
+    transition: 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    border-color: #b7ff5a;
+}
+
+.achievement-card span {
+    color: #b7ff5a;
+}
+
+.achievement-card h3 {
+    font-size: 2rem;
+    margin: 30px 0 10px;
+}
+
+.achievement-card p {
+    max-width: 700px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.achievement-card a {
+    color: #b7ff5a;
+    border-bottom: 1px solid #b7ff5a;
+    padding-bottom: 5px;
+}
+
+
+
+/* =========================
    PROJECTS
 ========================= */
 
@@ -317,8 +408,9 @@ footer {
 
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    width: min(300px, 80vw);
+    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #b7ff5a;
@@ -352,6 +444,18 @@ footer {
         display: none;
     }
 
+    .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 7%;
+    background: #000b17;
+    padding: 20px;
+    gap: 20px;
+    border: 1px solid #b7ff5a;
+    }
+    
     .menu-btn {
         display: block;
     }
@@ -362,7 +466,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 5rem;
+        font-size: clamp(3.5rem, 18vw, 5rem);
     }
 
     .hero-image {

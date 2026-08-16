@@ -7,13 +7,16 @@ clicklogo.addEventListener("click", function() {
 });
 
 const menuButton = document.querySelector("#menu-btn");
-
 const navLinks = document.querySelector(".nav-links");
 
-let menuOpen = false;
-
 menuButton.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+});
 
-    menuOpen = !menuOpen;
+const links = document.querySelectorAll(".nav-links a");
 
+links.forEach(link => {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+    });
 });
